@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Rest Client</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">HTTP Rest Client</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Home</string>
+    <string name="action_settings">Exit</string>
+
+    <string name="thankyou">Thank you</string>
+    <string name="wewillback">Thank you for the request, you will receive email confirmation shortly.</string>
+    <string name="ok">OK</string>
+    <string name="wrong">Something went wrong</string>
+    <string name="pleasewait">Please Wait ...</string>
+    <string name="cancel">Cancel</string>
+    <string name="action_clear">Clear History</string>
+
+
+    <string-array name="request_method_array">
+    <item>GET</item>
+    <item>POST</item>
+    <item>HEAD</item>
+    <item>PUT</item>
+    <item>DELETE</item>
+    <item>CREATE</item>
+    <item>PATCH</item>
+    </string-array>
+
+    <string-array name="request_http_array">
+        <item>https://</item>
+        <item>http://</item>
+    </string-array>
+
+    <string-array name="request_body_array">
+        <item>Text</item>
+        <item>JSON</item>
+        <item>XML</item>
+        <item>Text(text/plain)</item>
+        <item>XML(text/xml)</item>
+        <item>Javascript</item>
+        <item>FORM</item>
+        <item>HTML</item>
+        <item>CSS</item>
+        <item>CSV</item>
+    </string-array>
+
+
+</resources>

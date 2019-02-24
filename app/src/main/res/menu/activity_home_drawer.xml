@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_new"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_collection"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Collection" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="History" />
+    </group>
+
+    <item android:title=" " >
+        <!--<item-->
+            <!--android:id="@+id/nav_import"-->
+            <!--android:icon="@drawable/ic_menu_send"-->
+            <!--android:title="Import/Export" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_export"-->
+            <!--android:icon="@drawable/ic_menu_send"-->
+            <!--android:title="Export" />-->
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Update" />
+
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Exit" />
+    </item>
+
+
+    <!--<item android:title=" ">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Update" />-->
+
+            <!--<item-->
+                <!--android:id="@+id/nav_exit"-->
+                <!--android:icon="@drawable/ic_menu_camera"-->
+                <!--android:title="Exit" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

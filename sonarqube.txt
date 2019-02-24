@@ -1,0 +1,132 @@
+Run sonarqube by
+
+E:\Software\sonarqube\sonarqube-7.3\bin\windows-x86-64\StartSonar.bat
+---------------------------------------------------------------
+
+Add project level bulid.gradle
+
+ dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.3'
+
+        classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6'
+
+    }
+---------------------------------------------------------------
+Add app level bulid.gradle
+
+apply plugin: 'org.sonarqube'
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "HttpRestClient"
+        property "sonar.projectKey", "com.pritam.httprestclient"
+        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.language", "java"
+        property "sonar.sources", "src/main/java"
+        property "sonar.login", "admin"
+        property "sonar.password", "admin"
+    }
+}
+
+---------------------------------------------------------------
+
+in new cmd
+E:\Code\Java\AndroidMyProjects\HttpRestClient>gradle sonarqube
+
+---------------------------------------------------------------
+
+Microsoft Windows [Version 10.0.10240]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+E:\Code\Java\AndroidMyProjects\HttpRestClient>gradle sonarqube
+Starting a Gradle Daemon, 2 incompatible and 1 stopped Daemons could not be reused, use --status for details
+
+> Configure project :app
+Observed package id 'platforms;android-28' in inconsistent location 'E:\Software\AndroidStudio3\sdk\platforms\android-9' (Expected 'E:\Software\AndroidStudio3\sdk\platforms\android-28')
+
+Download https://dl.google.com/dl/android/maven2/com/android/support/design/28.0.0-rc02/design-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/customtabs/28.0.0-rc02/customtabs-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/constraint/constraint-layout/1.1.3/constraint-layout-1.1.3.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/appcompat-v7/28.0.0-rc02/appcompat-v7-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/cardview-v7/28.0.0-rc02/cardview-v7-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/collections/28.0.0-rc02/collections-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-annotations/28.0.0-rc02/support-annotations-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-compat/28.0.0-rc02/support-compat-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/cursoradapter/28.0.0-rc02/cursoradapter-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-fragment/28.0.0-rc02/support-fragment-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-vector-drawable/28.0.0-rc02/support-vector-drawable-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-core-utils/28.0.0-rc02/support-core-utils-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/animated-vector-drawable/28.0.0-rc02/animated-vector-drawable-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/recyclerview-v7/28.0.0-rc02/recyclerview-v7-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/transition/28.0.0-rc02/transition-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-core-ui/28.0.0-rc02/support-core-ui-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/constraint/constraint-layout-solver/1.1.3/constraint-layout-solver-1.1.3.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/interpolator/28.0.0-rc02/interpolator-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/versionedparcelable/28.0.0-rc02/versionedparcelable-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/android/arch/lifecycle/runtime/1.1.1/runtime-1.1.1.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/print/28.0.0-rc02/print-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/localbroadcastmanager/28.0.0-rc02/localbroadcastmanager-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/loader/28.0.0-rc02/loader-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/documentfile/28.0.0-rc02/documentfile-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/android/arch/lifecycle/viewmodel/1.1.1/viewmodel-1.1.1.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/slidingpanelayout/28.0.0-rc02/slidingpanelayout-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/viewpager/28.0.0-rc02/viewpager-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/customview/28.0.0-rc02/customview-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/drawerlayout/28.0.0-rc02/drawerlayout-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/coordinatorlayout/28.0.0-rc02/coordinatorlayout-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/asynclayoutinflater/28.0.0-rc02/asynclayoutinflater-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/swiperefreshlayout/28.0.0-rc02/swiperefreshlayout-28.0.0-rc02.pom
+Download https://dl.google.com/dl/android/maven2/android/arch/lifecycle/common/1.1.1/common-1.1.1.pom
+Download https://dl.google.com/dl/android/maven2/android/arch/core/common/1.1.1/common-1.1.1.pom
+Download https://dl.google.com/dl/android/maven2/android/arch/lifecycle/livedata-core/1.1.1/livedata-core-1.1.1.pom
+Download https://dl.google.com/dl/android/maven2/android/arch/core/runtime/1.1.1/runtime-1.1.1.pom
+Download https://dl.google.com/dl/android/maven2/com/android/support/constraint/constraint-layout/1.1.3/constraint-layout-1.1.3.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/design/28.0.0-rc02/design-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/appcompat-v7/28.0.0-rc02/appcompat-v7-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/cardview-v7/28.0.0-rc02/cardview-v7-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/customtabs/28.0.0-rc02/customtabs-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-fragment/28.0.0-rc02/support-fragment-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/animated-vector-drawable/28.0.0-rc02/animated-vector-drawable-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-core-ui/28.0.0-rc02/support-core-ui-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/recyclerview-v7/28.0.0-rc02/recyclerview-v7-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-core-utils/28.0.0-rc02/support-core-utils-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-vector-drawable/28.0.0-rc02/support-vector-drawable-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/loader/28.0.0-rc02/loader-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/transition/28.0.0-rc02/transition-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/viewpager/28.0.0-rc02/viewpager-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/coordinatorlayout/28.0.0-rc02/coordinatorlayout-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/drawerlayout/28.0.0-rc02/drawerlayout-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/slidingpanelayout/28.0.0-rc02/slidingpanelayout-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/customview/28.0.0-rc02/customview-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-compat/28.0.0-rc02/support-compat-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/asynclayoutinflater/28.0.0-rc02/asynclayoutinflater-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/swiperefreshlayout/28.0.0-rc02/swiperefreshlayout-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/cursoradapter/28.0.0-rc02/cursoradapter-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/versionedparcelable/28.0.0-rc02/versionedparcelable-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/interpolator/28.0.0-rc02/interpolator-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/android/arch/lifecycle/runtime/1.1.1/runtime-1.1.1.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/localbroadcastmanager/28.0.0-rc02/localbroadcastmanager-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/documentfile/28.0.0-rc02/documentfile-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/com/android/support/print/28.0.0-rc02/print-28.0.0-rc02.aar
+Download https://dl.google.com/dl/android/maven2/android/arch/lifecycle/viewmodel/1.1.1/viewmodel-1.1.1.aar
+Download https://dl.google.com/dl/android/maven2/android/arch/lifecycle/livedata-core/1.1.1/livedata-core-1.1.1.aar
+Download https://dl.google.com/dl/android/maven2/android/arch/core/runtime/1.1.1/runtime-1.1.1.aar
+Download https://dl.google.com/dl/android/maven2/android/arch/lifecycle/common/1.1.1/common-1.1.1.jar
+Download https://dl.google.com/dl/android/maven2/com/android/support/collections/28.0.0-rc02/collections-28.0.0-rc02.jar
+Download https://dl.google.com/dl/android/maven2/com/android/support/support-annotations/28.0.0-rc02/support-annotations-28.0.0-rc02.jar
+Download https://dl.google.com/dl/android/maven2/android/arch/core/common/1.1.1/common-1.1.1.jar
+Download https://dl.google.com/dl/android/maven2/com/android/support/constraint/constraint-layout-solver/1.1.3/constraint-layout-solver-1.1.3.jar
+
+> Task :app:sonarqube
+SCM provider autodetection failed. No SCM provider claims to support this project. Please use sonar.scm.provider to define SCM of your project.
+Metric 'comment_lines_data' is deprecated. Provided value is ignored.
+
+
+BUILD SUCCESSFUL in 2m 46s
+29 actionable tasks: 16 executed, 13 up-to-date
+E:\Code\Java\AndroidMyProjects\HttpRestClient>gradle sonarqube
+
+> Configure project :app
+Observed package id 'platforms;android-28' in inconsistent location 'E:\Software\AndroidStudio3\sdk\platforms\android-9' (Expected 'E:\Software\AndroidStudio3\sdk\platforms\android-28')
+<=====--------> 38% EXECUTING [18s]
+> :app:processDebugResources

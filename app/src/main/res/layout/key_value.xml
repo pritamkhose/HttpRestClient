@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="2dp"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/key"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="key"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        android:singleLine="false"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:hint="value"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        android:text=""
+        android:textColor="@color/holo_blue_dark"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/remove"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="-25dp"
+        android:src="@mipmap/delete" />
+
+</LinearLayout>
